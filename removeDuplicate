@@ -1,0 +1,35 @@
+import java.util.*;
+public class A{
+  public static int removeDuplicate(int[] num){
+    //creating index to store the resultant array
+    int j=1;
+    for(int i=0;i<num.length;i++){
+      if(num[i]!=num[i-1]){
+        num[j]=num[i];
+        j++;
+        }
+      }
+      return j;
+      }
+  public static void main(String[] args){
+    Scanner sc=new Scanner(Sytem.in);
+    System.out.println("Enter the number of elements:");
+    int n=sc.nextInt();
+    //taking array input
+    int []num=new int[n];
+    System.out.println("Enter"+n+"Sorted elements:");
+    for(int i=0;i<n;i++){
+      num[i]=sc.nextInt();
+      }
+    int j=removeDuplicate(num);
+
+    //print result
+    System.out.println("Number of unique elements:"+ j);
+    System.out.println("Modified array with unique elements:" );
+    for(int i=0;i<j;i++){
+      System.out.println(num[i]+" ");
+      }
+    }
+  }
+    
+    
