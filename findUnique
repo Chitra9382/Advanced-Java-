@@ -1,0 +1,16 @@
+public class D{
+  static int findUnique(int[] arr){
+      int result=0;
+      for(int a:arr){
+      //xor operation find out the unique element among the array
+         result^=a;
+         }
+         return result;
+        }
+public static void main(String[] args){
+        int arr[]={2,3,4,5,5,3,2};
+        System.out.println(findUnique(arr));
+        }
+      }
+        
+          
