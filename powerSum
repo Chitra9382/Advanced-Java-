@@ -1,0 +1,36 @@
+import java.util.*;
+public class F{
+  public static List<List<Integers>> powerSet(int[]num){
+  //store result
+List<List<Integers>> result=new ArrayList<>();
+//declaring method in public
+backtrack(start:0,num,new ArrayList<>(),result);
+return result;
+}
+private static void backtrack(int start,int []num,List<Integer> current,List<List<Integer>> result){
+result.add(new ArrayList<>(current));
+for(int i=start;i<num.length;i++){
+   current.add(num[i]);
+   backtrack(i+1,num,current,result);
+   current.remove(current.size()-1);
+   }
+   }
+   public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter number of elements:");
+   int n=sc.nextInt();
+   //array input
+   int []num=new int[n];
+   System.out.println("Enter"+n+ "elements:");
+   for(int i=0;i<n;i++){
+     num[i]=sc.nextInt();
+     }
+     List<List<Integer>> subset=powerSet(num);  //calling method
+     System.out.println("Power Set:");
+     for(List<Integer> sb:subset){
+     System.out.println(sb);
+     }
+     }
+  }
+     
+   
