@@ -1,0 +1,34 @@
+import java.util.*;
+public class F{
+  public ststic String reverseWord(String s){
+    StringBuilder sb=new StringBuilder();
+    int n=s.length();
+    int si=n-1;
+    
+    while(si>=0){
+      //removing leading and trailing spaces
+      if(s.charAt(si))==' '){
+        si--;
+        continue;
+      }
+      //marking the last word
+      int ei=si;
+      while(si>=0 && s.charAt(si)!=' '){
+        si--;
+      if(sb.length()>0){
+        sb.append(' ');
+        }
+        sb.append(s.substring(si+1,ei+1));
+      }
+      return sb.toString();
+    }
+  public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a String");
+    String input=sc.nextLine();
+    String reverse=reverseWord(input);
+    System.out.println("Reverse String:"+reverse);
+    }
+  }
+        
+      
