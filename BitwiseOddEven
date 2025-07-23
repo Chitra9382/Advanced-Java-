@@ -1,0 +1,23 @@
+import java.util.*;
+public class F{
+ public static void printBinary(int num){
+   for(int i=10;i>=0;i--){
+     System.out.print((num>>i)&1);
+}
+System.out.println();
+}
+public static void main(String[] args){
+ System.out.println("Enter a number");
+ Scanner sc=new Scanner(System.in);
+ int input=sc.nextInt();
+ printBinary(input);
+if((input&1)==1){
+ System.out.println(input + "is a odd number");
+}else{
+ System.out.println(input + "is even number");
+}
+}
+}
+
+
+ 
